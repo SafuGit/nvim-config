@@ -103,7 +103,9 @@ require("lazy").setup({
 
     {'m4xshen/autoclose.nvim'},
 
-    {'junegunn/rainbow_parentheses.vim'}
+    {'junegunn/rainbow_parentheses.vim'},
+
+    {'andweeb/presence.nvim'}
 
   },
   -- Configure any other settings here. See the documentation for more details.
@@ -185,7 +187,8 @@ vim.cmd([[
 require('mason-lspconfig').setup({
     ensure_installed = {
         'ruff_lsp',
-        'rust_analyzer'
+        'rust_analyzer',
+        'html'
     },
 })
 
@@ -201,6 +204,12 @@ require("lspconfig").ruff_lsp.setup({
     }
 })
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require("lspconfig").html.setup({
+    capabilities = capabilities,
+})
 
 -- Configs
 
