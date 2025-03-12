@@ -1,3 +1,6 @@
+# WARNING
+**THIS CONFIG IS DEPRECATED REFER TO [SafuVIM-V2](https://github.com/SafuGit/safuvim-v2) instead**
+
 # My NeoVim Config
 ![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
 
